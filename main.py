@@ -32,8 +32,9 @@ else:
     pass
 
 data_load.data_loading()
-check_val = 1
 
+# Train, Val, Test column 크기가 동일하도록 맞춰주기
+check_val = 1
 while check_val == 1:
     train_input, train_label, val_input, val_label, test_input, test_label = data_load.data_preprocessing()
 
@@ -48,7 +49,6 @@ while check_val == 1:
 model = mlp_load.create_model(len(train_label[0][0]))
 
 # train
-
 history = model.fit(train_input,
                     {'avg_road': train_label[:, 0], 'trinspct_road': train_label[:, 1], 'surfc_gripfc': train_label[:, 2]},
                     epochs=setting.epochs,
