@@ -16,7 +16,7 @@ class Setting():
         self.trainval_rate = 0.8
         self.val_rate = 0.2
         self.batchsize = 1000
-        self.epochs = 100
+        self.epochs = 500
         self.nlayer = 8
         self.nnode = 24
         self.actv_name = 'relu'

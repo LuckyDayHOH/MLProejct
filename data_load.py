@@ -38,7 +38,7 @@ class Data_load():
 
         if pagenum == setting.pageno:
             data_concatenate = pd.DataFrame(self.data_list)
-            data_concatenate.to_csv('./data.txt', sep='\t', index=False)
+            data_concatenate.to_csv('./data_large.txt', sep='\t', index=False)
             print(data_concatenate)
 
     def data_loading(self):

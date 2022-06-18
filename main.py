@@ -2,8 +2,6 @@ import os
 import sys
 import numpy as np
 import pandas as pd
-import tensorflow as tf
-
 from setting import Setting
 from data_load import Data_load
 from mlp_load import MLP_load
@@ -13,14 +11,6 @@ setting = Setting()
 data_load = Data_load()
 mlp_load = MLP_load()
 save_file = Save_file()
-
-os.environ["CUDA_VISIBLE_DEVICES"]="0"
-gpus = tf.config.experimental.list_physical_devices('GPU')
-if gpus:
-    try:
-        tf.config.experimental.set_memory_growth(gpus[0], True)
-    except RuntimeError as e:
-        print(e)
 
 if setting.data_download_onoff == 1:
     for i in range(0, setting.pageno + 1, 1):
@@ -32,9 +22,8 @@ else:
     pass
 
 data_load.data_loading()
-
-# Train, Val, Test column 크기가 동일하도록 맞춰주기
 check_val = 1
+
 while check_val == 1:
     train_input, train_label, val_input, val_label, test_input, test_label = data_load.data_preprocessing()
 

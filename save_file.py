@@ -27,11 +27,5 @@ class Save_file():
 
     def history_save(self, train, test):
 
-        # with open('./save_file/Train_val history.csv', mode='w') as f:
-        #     train.to_csv(f)
-        #
-        # with open('./save_file/Test history.csv', mode='w') as f:
-        #     test.to_csv(f)
-
         train.to_csv('./save_file/Train_val history.csv', index=False)
         test.to_csv('./save_file/Test history.csv', index=False)
