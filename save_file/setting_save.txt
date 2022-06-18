@@ -1,0 +1,9 @@
+input param index : [0, 1, 2, 3, 4, 9, 10, 11, 13, 14, 15] 
+output param index : [5, 6, 12] 
+one_hot on/off 0: off, 1: on : 1 
+train_val_rate : 0.8 
+val_rate : 0.2 
+batch size : 1000 
+epochs : 500 
+actv_name : relu 
+loss_name : categorical_crossentropy 

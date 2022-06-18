@@ -1,0 +1,2 @@
+loss,avg_road_loss,trinspct_road_loss,surfc_gripfc_loss,avg_road_accuracy,trinspct_road_accuracy,surfc_gripfc_accuracy
+0.008304806426167488,0.0064338622614741325,0.0018691181903705,1.8245199271405e-06,0.997827410697937,0.9993540644645691,1.0
