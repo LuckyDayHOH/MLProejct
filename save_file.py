@@ -14,10 +14,11 @@ class Save_file():
 
         f.write('input param index : {input} \n'.format(input=setting.input_index))
         f.write('output param index : {output} \n'.format(output=setting.output_index))
-        f.write('one_hot on/off 0: off, 1: on : {num} \n'.format(num=setting.one_hot_onoff))
         f.write('train_val_rate : {num} \n'.format(num=setting.trainval_rate))
         f.write('val_rate : {num} \n'.format(num=setting.val_rate))
         f.write('batch size : {num} \n'.format(num=setting.batchsize))
+        f.write('nlayer : {num} \n'.format(num=setting.nlayer))
+        f.write('nnode : {num} \n'.format(num=setting.nnode))
         f.write('epochs : {num} \n'.format(num=setting.epochs))
         f.write('actv_name : {name} \n'.format(name=setting.actv_name))
         f.write('loss_name : {name} \n'.format(name=setting.loss))
